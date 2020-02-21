@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mysql.cj.protocol.a.TimeTrackingPacketReader;
-
 import model.Destinacija;
 import model.TipTransporta;
 import model.Transport;
@@ -22,10 +20,10 @@ import service.TransportService;
 @WebServlet("/DodajTransportServlet")
 public class DodajTransportServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String cena = request.getParameter("cena");
@@ -35,24 +33,35 @@ public class DodajTransportServlet extends HttpServlet {
 		
 		TransportService servis = new TransportService();
 		
-		//model za ubacivanje u bazu
+		// model za ubacivanje u bazu
 		Transport transport = new Transport();
-		if(cena!=null) {
-		transport.setCena(Double.parseDouble(cena));
+		
+		if(cena != null) {
+			transport.setCena(Double.parseDouble(cena));
 		}
-		if(popust!=null) {
+		if(!(popust.trim()).isEmpty()) {
 			transport.setPopust(Double.parseDouble(popust));
 		}else {
 			transport.setPopust(0.0);
 		}
 		
-		if(tipPrevoza!=null) {
-			servis.podesiTipTransporta(transport, tipPrevoza);
-			
+		if(tipPrevoza != null) {
+			servis.podesiTipTransporta(transport,tipPrevoza);
 		}
 		
-		List<Destinacija> lista = (List<Destinacija>)request.getAttribute("listaDestinacija2");
-		System.out.println("Id prve destinacije: " + lista.get(0).getIdDestinacija());
+		Destinacija destinacija = servis.vratiDestinacijuPoID(idDestinacija);
+		
+		transport.setDestinacija(destinacija);
+		
+		boolean daLiJeUbacioTrasport = servis.snimiTransport(transport);
+		
+		if(daLiJeUbacioTrasport) {
+			response.sendRedirect("view/adminPage.jsp");
+		}else {
+			response.sendRedirect("view/dodajTransport.jsp");
+		}
+		
+		
 	}
 
 }
