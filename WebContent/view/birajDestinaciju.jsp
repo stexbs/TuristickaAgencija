@@ -22,9 +22,9 @@
 	
 	
 <!-- 	preuzmi listu iz request objecta -->
-<jsp:useBean id="destinacije" scope="request"  class = "java.util.ArrayList<model.Destinacija>" type="java.util.List<model.Destinacija>"></jsp:useBean>
+<jsp:useBean id="destinacije" scope="request"   type="java.util.List<model.Destinacija>"></jsp:useBean>
 
-<c:set var = "listaDestinacija" value="${destinacije}"/>
+
 
 <table border="1">
 	<tr>
@@ -34,7 +34,7 @@
 		<th>POPUST</th>
 		<th>CENA</th>	
 	</tr>
-	<c:forEach var="d" items="listaDestinacija">
+	<c:forEach var="d" items="${destinacije}">
 	<tr>
 		<td>${d.drzava}</td>
 		<td>${d.mesto}</td>
