@@ -8,7 +8,6 @@ public class Putnik {
 	private String ime;
 	private Integer brojGodina;
 	
-	
 	public String getIme() {
 		return ime;
 	}
@@ -21,9 +20,7 @@ public class Putnik {
 	public void setBrojGodina(Integer brojGodina) {
 		this.brojGodina = brojGodina;
 	}
-	
-	
-	
+
 	
 
 }

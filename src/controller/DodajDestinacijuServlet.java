@@ -16,21 +16,13 @@ import service.DodajDestinacijuService;
 @WebServlet("/DodajDestinacijuServlet")
 public class DodajDestinacijuServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public DodajDestinacijuServlet() {
-        super();
-        
-    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-System.out.println("Dosao si na dodaj destinaciju servlet");
+		System.out.println("Dosao si na dodaj destinaciju servlet");
 		
 		//prihvatili smo parametre
 		String drzava = request.getParameter("drzava");
@@ -59,6 +51,5 @@ System.out.println("Dosao si na dodaj destinaciju servlet");
 		
 		
 	}
-	
 
 }

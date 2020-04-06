@@ -14,7 +14,7 @@
 Index: ${idUser }
 	<form action="../DodajBalanceServlet">
 	
-						<input type="hidden" name = "id" value="${idUser}">
+						<input type="hidden" name = "id" value="${idUser }">
 	Upisi iznos: <input type="text" name = "add">
 						 <input type="submit" value="DODAJ">
 	</form>

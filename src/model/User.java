@@ -14,16 +14,16 @@ import javax.persistence.Id;
 @Entity
 public class User {
 	
-	@Id 
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idUser;
 	private String userName;
 	private String password;
-	private Double balance = 0.0;
+	private Double balance;
 	@Enumerated
 	private Rola rola;
 	@ElementCollection(fetch = FetchType.EAGER)
-	private List<Putnik> sviPutnici = new ArrayList<Putnik>();
+	private List<Putnik> sviPutnici = new ArrayList<>();
 	
 	public Integer getIdUser() {
 		return idUser;
@@ -65,4 +65,5 @@ public class User {
 	
 	
 	
+
 }

@@ -17,7 +17,7 @@ import service.TransportService;
 /**
  * Servlet implementation class ListaDestinacijaServlet
  */
-@WebServlet("/ListaDestinacijaServlet")
+@WebServlet(description = "lista", urlPatterns = { "/ListaDestinacijaServlet" })
 public class ListaDestinacijaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -27,21 +27,23 @@ public class ListaDestinacijaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		TransportService service = new TransportService();
+		
 		//izvlacim iz baze listu destinacija
 		List<Destinacija> listaDestinacija = service.vratiSveDestinacije();
 		
-		//popunjavam request object  
-		request.setAttribute("listaDestinacija", listaDestinacija); 
+		//popunjavam request object
+		request.setAttribute("listaDestinacija", listaDestinacija);
 		
 		if(listaDestinacija != null && !listaDestinacija.isEmpty()) {
-			//saljem na dodaj transport
+			//saljem na dodajTransport.jsp
 			RequestDispatcher dispatcher = request.getRequestDispatcher("view/dodajTransport.jsp");
-			
 			dispatcher.forward(request, response);
-		}
-		else {
+		}else {
 			response.sendRedirect("view/adminPage.jsp");
 		}
+		
+		
+		
 	}
 
 }

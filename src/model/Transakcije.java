@@ -17,6 +17,7 @@ public class Transakcije {
 	@OneToOne
 	private Racun racun;
 	private Date datum;
+	
 	public Integer getIdTransakcije() {
 		return idTransakcije;
 	}

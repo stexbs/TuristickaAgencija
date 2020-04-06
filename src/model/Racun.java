@@ -22,10 +22,9 @@ public class Racun {
 	private List<Destinacija> listaDestinacija = new ArrayList<Destinacija>();
 	@OneToOne
 	private Transport transport;
-	private double cenaTransporta;
-	private double cenaSmestaja;
-	private double total;
-	
+	private Double cenaTransporta;
+	private Double cenaSmestaja;
+	private Double total;
 	
 	public Integer getIdRacun() {
 		return idRacun;
@@ -39,38 +38,39 @@ public class Racun {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
-	public List<Destinacija> getListaDestinacija() {
-		return listaDestinacija;
-	}
-	public void setListaDestinacija(List<Destinacija> listaDestinacija) {
-		this.listaDestinacija = listaDestinacija;
-	}
+
 	public Transport getTransport() {
 		return transport;
 	}
 	public void setTransport(Transport transport) {
 		this.transport = transport;
 	}
-	public double getCenaTransporta() {
+	public Double getCenaTransporta() {
 		return cenaTransporta;
 	}
-	public void setCenaTransporta(double cenaTransporta) {
+	public void setCenaTransporta(Double cenaTransporta) {
 		this.cenaTransporta = cenaTransporta;
 	}
-	public double getCenaSmestaja() {
+	public Double getCenaSmestaja() {
 		return cenaSmestaja;
 	}
-	public void setCenaSmestaja(double cenaSmestaja) {
+	public void setCenaSmestaja(Double cenaSmestaja) {
 		this.cenaSmestaja = cenaSmestaja;
 	}
-	public double getTotal() {
+	public Double getTotal() {
 		return total;
 	}
-	public void setTotal(double total) {
+	public void setTotal(Double total) {
 		this.total = total;
+	}
+	public List<Destinacija> getListaDestinacija() {
+		return listaDestinacija;
+	}
+	public void setListaDestinacija(List<Destinacija> listaDestinacija) {
+		this.listaDestinacija = listaDestinacija;
 	}
 	
 	
-
+	
+	
 }

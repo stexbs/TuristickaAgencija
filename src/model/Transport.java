@@ -44,7 +44,7 @@ public class Transport {
 	public void setDestinacija(Destinacija destinacija) {
 		this.destinacija = destinacija;
 	}
-	public double getPopust() {
+	public Double getPopust() {
 		return popust;
 	}
 	public void setPopust(Double popust) {
@@ -52,5 +52,5 @@ public class Transport {
 	}
 	
 	
-
+	
 }

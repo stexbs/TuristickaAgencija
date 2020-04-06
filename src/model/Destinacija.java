@@ -63,13 +63,15 @@ public class Destinacija {
 	public void setDatumPolaska(Date datumPolaska) {
 		this.datumPolaska = datumPolaska;
 	}
-	public double getPopust() {
+	public Double getPopust() {
 		return popust;
 	}
 	public void setPopust(Double popust) {
 		this.popust = popust;
 	}
+	
+	
+	
+	
 
-	
-	
 }

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Destinacije</title>
+<title>|Destinacije</title>
 	<link rel = "stylesheet"
 			 type = "text/css"
 			href ="../css/style.css"
