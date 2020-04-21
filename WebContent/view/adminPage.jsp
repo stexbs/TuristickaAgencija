@@ -22,51 +22,18 @@
 
 	<h1> Hellooo   ${user.userName} </h1>
 	
-	
-	<%
-		int x = 6;
-	    int y = 7;
-	    int zbir = x+y;
-	
-	%>
-	<c:set var="x" value="6"/>
-	<c:set var="y" value="7"/>
-	<c:set var="zbir" value= "${x+y}"  />
-	
-	<p>Moj omiljeni zbir brojeva je:${zbir }</p> 
-	
-	<% 
-		if(zbir<5){
-	%>
-	
-		<p> Nista!</p>
-	
-	<% 
-	}else{
-	%>
-		<p> ok!</p>
-	<% 	
-	}
-	%>
+	<a href = "../index.html"> back to index</a>
 	
 	
-	<table border="1">
-		<tr>
-			<th>BROJ</th>
-			<th>NESTO</th>
-		</tr> 
-		
-		<c:forEach  var ="i" begin="0" end="${zbir}" >
-			<tr>
-				<td>${i}</td>
-				<td>${zbir-i }</td>
-			</tr>
-		</c:forEach>
-
-	</table>
+	
+	
+	
+	
+	
 	<div >
+	<h2>Tabela svih user-a</h2>
 	<a href = "../SviUseriServlet"> 
-		<img src="../slike/globus.jpg">
+		<img src="../slike/sviuseri.png">
 	</a>
 	</div>
 	<br>
