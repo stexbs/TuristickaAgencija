@@ -9,9 +9,9 @@
 	
 		<!-- Database connection settings --> <!-- Ovo je komentar -->
 		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/turisticka_agencija?allowPublicKeyRetrieval=true&amp;useSSL=false</property>
+		<property name="connection.url">jdbc:mysql://node175209-turistickaagencija.jelastic.regruhosting.ru/turisticka_agencija</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">root</property>
+		<property name="connection.password">QZXclc81177</property>
 		
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>

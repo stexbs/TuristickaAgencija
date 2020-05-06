@@ -77,8 +77,8 @@ public class PraviRacunServlet extends HttpServlet {
 			cenaTransporta = transport.getCena();
 			popustZaTransport = transport.getPopust();
 		}else {
-			cenaTransporta = 0.0;
-			popustZaTransport = 0.0;
+			cenaTransporta = 0.00;
+			popustZaTransport = 0.00;
 		}
 
 		Double cenaAranzmana = servis.izracunajCenuAranzmana(cenaSmestaja,popustSmestaj,cenaTransporta,popustZaTransport,brojOsoba);
