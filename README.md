@@ -19,6 +19,7 @@ izvučenoj iz baze i da koriguje balans na njihovom računu. Pored toga može i 
 aranžmane (upravlja destinacijama, smestajem, cenama). Dok korisnik može da odabere destinaciju na
 koju želi da putuje, smeštaj kao i tip transporta i na kraju mu se ispostavlja račun.
 
+# http://turistickaagencija.cloud.ultimehost.com/ - live
 
 
 
