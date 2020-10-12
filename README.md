@@ -6,6 +6,9 @@ Administrator has the access to the list of all registered users and their balan
 database. Also he can add travel destinations, accomodations and prices.
 User then can pick from the offers (destination, accomodation and the type of transportion).
 At the end he gets the checkout summary.
+- To access admin page use:
+username: admin
+pass:admin
 
 # Technologies that i used
 - Java, MySQL, Hibernate, JSP, MVC pattern, Servlets, basic HTML and CSS
